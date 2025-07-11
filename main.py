@@ -11,6 +11,8 @@ app = ApplicationBuilder().token('7217581945:AAGJVTkq9MWDlCwsMWktk_G1rGqV7pJbzA8
 # Handlers
 app.add_handler(CommandHandler("add", TodoController.add_todo))
 app.add_handler(CommandHandler("list", TodoController.list_todos)) 
+app.add_handler(CommandHandler("check", TodoController.check_todo))  
+app.add_handler(CommandHandler("clear", TodoController.clear_todos))   
 
 app.run_polling(allowed_updates=Update.ALL_TYPES)
 
